@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/contentTextPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Name"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/mybutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登录按钮"
+        app:layout_constraintTop_toBottomOf="@+id/contentTextPanel"
+        tools:ignore="HardcodedText,MissingConstraints"
+        tools:layout_editor_absoluteX="77dp" />
+
+    <Button
+        android:id="@+id/finishButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="销毁活动"
+        app:layout_constraintTop_toBottomOf="@+id/mybutton"
+        tools:ignore="HardcodedText,MissingConstraints"
+        tools:layout_editor_absoluteX="78dp" />
+
+    <Button
+        android:id="@+id/intentDefault"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转至下一个活动"
+        app:layout_constraintTop_toBottomOf="@+id/finishButton"
+        tools:layout_editor_absoluteX="78dp"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
