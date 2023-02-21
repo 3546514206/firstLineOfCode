@@ -3,9 +3,9 @@ package edu.zjnu.startmode;
 /**
  * @author: 杨海波
  * @date: 2023-02-21 09:12:58
- * @description: AccumulateHolder
+ * @description: StandardHolder
  */
-public class AccumulateHolder {
+public class StandardHolder {
 
     private static volatile int value;
 
@@ -18,6 +18,6 @@ public class AccumulateHolder {
     }
 
     public static synchronized void setValue(int value) {
-        AccumulateHolder.value = value;
+        StandardHolder.value = value;
     }
 }
