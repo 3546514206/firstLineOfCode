@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StandardActivity">
+    tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -17,12 +17,12 @@
         tools:ignore="HardcodedText" />
 
     <Button
-        android:id="@+id/standard"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="standard"
+        android:text="button"
+        tools:ignore="HardcodedText,MissingConstraints"
         tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="53dp"
-        tools:ignore="HardcodedText,MissingConstraints" />
+        tools:layout_editor_absoluteY="53dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

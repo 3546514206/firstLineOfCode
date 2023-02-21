@@ -8,24 +8,25 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class StandardActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG = "StandardActivity";
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         StandardHolder.accumulate();
-        Log.i(TAG, String.valueOf(StandardHolder.getValue()));
 
-        Button standardModeButton = findViewById(R.id.standard);
+        Button button = findViewById(R.id.button);
 
-        standardModeButton.setOnClickListener(new View.OnClickListener() {
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(StandardActivity.this, StandardActivity.class);
+                Log.i(TAG, String.valueOf(StandardHolder.getValue()));
+                Intent intent = new Intent(MainActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
