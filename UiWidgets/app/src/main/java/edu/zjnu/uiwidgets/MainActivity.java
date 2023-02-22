@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
+import android.widget.ProgressBar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -27,18 +27,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         EditText text = findViewById(R.id.text);
         ImageView imageView = findViewById(R.id.imageView);
 
+        ProgressBar progressBar = findViewById(R.id.progressBar);
+
         viewMap.put("button", button);
         viewMap.put("text", text);
         viewMap.put("imageView", imageView);
+        viewMap.put("progressBar", progressBar);
     }
 
     @Override
     public void onClick(View v) {
-        EditText text = (EditText) viewMap.get("text");
-        String toastContent = null;
-        if (text != null) {
-            toastContent = text.getText().toString();
-        }
-        Toast.makeText(this, toastContent, Toast.LENGTH_LONG).show();
+//        EditText text = (EditText) viewMap.get("text");
+//        String toastContent = null;
+//        if (text != null) {
+//            toastContent = text.getText().toString();
+//        }
+//        Toast.makeText(this, toastContent, Toast.LENGTH_LONG).show();
+        ProgressBar progressBar = (ProgressBar) viewMap.get("progressBar");
+//        if (progressBar != null) {
+//            if (progressBar.getVisibility() == View.GONE) {
+//                progressBar.setVisibility(View.VISIBLE);
+//            } else {
+//                progressBar.setVisibility(View.GONE);
+//            }
+//        }
+        assert progressBar != null;
+        int process = progressBar.getProgress();
+        process = process + 10;
+        progressBar.setProgress(process);
     }
 }
