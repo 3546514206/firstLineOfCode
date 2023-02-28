@@ -56,4 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         process = process + 10;
         progressBar.setProgress(process);
     }
+
+
+
 }
