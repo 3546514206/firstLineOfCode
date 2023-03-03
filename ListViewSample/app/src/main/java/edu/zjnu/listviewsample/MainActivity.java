@@ -8,7 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private String[] data = {"1111", "2222", "3333", "4444", "5555", "6666", "7777", "8888", "9999"};
+    private String[] data = {"1111", "2222", "3333", "4444", "5555", "6666", "7777", "8888", "9999"
+            , "1234", "3456", "6789", "1456", "0987", "3719", "1830", "2683"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
