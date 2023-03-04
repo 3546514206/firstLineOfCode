@@ -34,7 +34,13 @@ public class FruitAdapter extends ArrayAdapter<Fruit> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         Fruit fruit = getItem(position);
 //        resourceId 应该是指整个 listview 列表
-        @SuppressLint("ViewHolder") View view = LayoutInflater.from(getContext()).inflate(resourceId, parent, false);
+        @SuppressLint("ViewHolder") View view ;
+//        利用缓存进行优化
+        if(convertView == null){
+            view = LayoutInflater.from(getContext()).inflate(resourceId, parent, false);
+        }else {
+            view = convertView;
+        }
         Button button =view.findViewById(R.id.button);
         TextView text = view.findViewById(R.id.textView);
         button.setText(fruit.getName());
