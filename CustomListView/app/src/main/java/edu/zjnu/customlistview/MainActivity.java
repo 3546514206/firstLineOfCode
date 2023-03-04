@@ -1,7 +1,11 @@
 package edu.zjnu.customlistview;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,6 +26,15 @@ public class MainActivity extends AppCompatActivity {
         FruitAdapter adapter = new FruitAdapter(MainActivity.this, R.layout.fruit_item, fruits);
         ListView view = findViewById(R.id.listView);
         view.setAdapter(adapter);
+
+
+        view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Fruit fruit = fruits.get(position);
+                Toast.makeText(MainActivity.this, fruit.getName(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void initFruits() {

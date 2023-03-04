@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -45,6 +46,7 @@ public class FruitAdapter extends ArrayAdapter<Fruit> {
         TextView text = view.findViewById(R.id.textView);
         button.setText(fruit.getName());
         text.setText(fruit.getName());
+
         return view;
     }
 }
